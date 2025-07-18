@@ -2,86 +2,94 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Lista de Deseados - Amigo Secreto</title>
+  <title>Lista de Deseados</title>
   <link rel="icon" type="image/png" href="https://i.imgur.com/u71QEFc.png">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #1b1b1b;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 30px;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #2563eb;
-      padding: 0.75rem 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      z-index: 9999;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    h1 {
-      color: #2563eb;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
+    * {
+      box-sizing: border-box;
     }
 
-    .container {
-      padding: 20px 10px 40px;
-      max-width: 800px;
-      margin: 0 auto;
+    body {
+     margin: 0;
+     padding: 70px 0 0 0; /* padding-top para que no quede tapado por el nav */
+     background: #fdf6e3; /* crema */
+     font-family: 'Segoe UI', sans-serif;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-start; /* que el contenido inicie desde arriba */
+     height: 100vh;
+     position: relative;
+     overflow-x: hidden;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 20px;
-      width: 100%;
-      max-width: 1000px;
+
+  nav {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color: #2563eb;
+     padding: 0.75rem 1rem;
+     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+     z-index: 9999;
+
+  /* Centrar el enlace */
+  display: flex;
+  justify-content: center;
+  }
+
+  nav a {
+     color: white;
+     text-decoration: none;
+     font-weight: 600;
+     font-size: 1rem;
+  }
+
+  nav a:hover {
+     text-decoration: underline;
+  }
+
+    .wishlist-container {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 20px;
+     padding: 20px;
+
+  /* Centrar y limitar ancho */
+     max-width: 1000px;
+     width: 90%;
+     margin: 0 auto;
+     z-index: 1;
     }
+
 
     .wish-box {
-      background-color: #2b2b2b;
-      padding: 15px;
-      border-radius: 15px;
+      background: #fff;
+      border: 2px solid #b30000;
+      border-radius: 20px;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s, background-color 0.2s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
     }
 
     .wish-box:hover {
-      transform: scale(1.03);
-      background-color: #3a3a3a;
+      transform: scale(1.05);
     }
 
     .wish-box span {
+      font-size: 20px;
+      font-weight: bold;
       display: block;
-      font-size: 18px;
       margin-bottom: 10px;
+      color: #006400; /* verde navideño */
     }
 
     .wish-box a img {
-      width: 48px;
+      width: 50px;
       height: auto;
-      transition: transform 0.2s;
     }
 
-    .wish-box a img:hover {
-      transform: scale(1.1);
-    }
   </style>
 </head>
 <body>
@@ -90,58 +98,57 @@
     <a href="https://cornetagang.github.io/amigosecreto/">Volver al Sorteo</a>
   </nav>
 
-  <div class="container">
-    <h1>🎁 Lista de Deseados 🎁</h1>
-
-  <div class="grid">
+  <h2>🎁 Listas de Deseos 🎁</h2>
+  <div class="wishlist-container">
     <div class="wish-box">
       <span>Ariel</span>
       <a href="https://store.steampowered.com/wishlist/id/Legossit_o/" target="_blank">
-        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Lista de Ariel">
+        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Steam">
       </a>
     </div>
     <div class="wish-box">
       <span>Cata</span>
       <a href="https://store.steampowered.com/wishlist/profiles/76561198139953254/" target="_blank">
-        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Lista de Cata">
+        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Steam">
       </a>
     </div>
     <div class="wish-box">
       <span>Chico</span>
       <a href="https://store.steampowered.com/wishlist/id/ilovecocks911/" target="_blank">
-        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Lista de Chico">
+        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Steam">
       </a>
     </div>
     <div class="wish-box">
       <span>Dann</span>
       <a href="https://store.steampowered.com/wishlist/profiles/76561198279882359/" target="_blank">
-        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Lista de Dann">
+        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Steam">
       </a>
     </div>
     <div class="wish-box">
       <span>Felipe</span>
       <a href="https://store.steampowered.com/wishlist/profiles/76561199354209451/" target="_blank">
-        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Lista de Felipe">
+        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Steam">
       </a>
     </div>
     <div class="wish-box">
       <span>Jaime</span>
       <a href="https://store.steampowered.com/wishlist/profiles/76561198321085511/" target="_blank">
-        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Lista de Jaime">
+        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Steam">
       </a>
     </div>
     <div class="wish-box">
       <span>Lukas</span>
       <a href="https://store.steampowered.com/wishlist/id/dinosaurio9581/" target="_blank">
-        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Lista de Lukas">
+        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Steam">
       </a>
     </div>
     <div class="wish-box">
       <span>Pinilla</span>
       <a href="https://store.steampowered.com/wishlist/profiles/76561198309924508/" target="_blank">
-        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Lista de Pinilla">
+        <img src="https://images.seeklogo.com/logo-png/29/2/steam-logo-png_seeklogo-290636.png" alt="Steam">
       </a>
     </div>
   </div>
+
 </body>
 </html>
